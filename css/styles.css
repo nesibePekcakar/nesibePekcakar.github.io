@@ -8163,7 +8163,7 @@ textarea.form-control-lg {
 .text-uppercase {
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: clamp(0.8rem, 1.5vw, 1rem);
+  font-size: clamp(0.75rem, 1.3vw, 0.95rem);
 }
 
 
