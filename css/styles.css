@@ -4214,6 +4214,9 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .card-title {
@@ -4338,21 +4341,25 @@ textarea.form-control-lg {
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
-  .card img {
+.card img {
   width: 100%;
   height: auto;
-  max-height: 16rem; /* Görsellerin aşırı uzamasını engeller */
-  object-fit: cover; /* Görsel taşmadan alana oturur */
+  aspect-ratio: 16 / 9; /* Her görseli aynı oranda gösterir */
+  object-fit: cover; /* Görsel taşmadan kesilir */
   border-radius: var(--bs-card-inner-border-radius);
   display: block;
+  margin: 0 auto;
 }
 
-/* Küçük ekranlar için biraz daha küçük yüksekliğe geçelim */
+
+
+/* Küçük ekranlar için orana biraz daha uygun bir yükseklik */
 @media (max-width: 768px) {
   .card img {
-    max-height: 12rem;
+    aspect-ratio: 4 / 3;
   }
 }
+
 
 }
 
@@ -8187,9 +8194,7 @@ textarea.form-control-lg {
 }
 
 .text-uppercase {
-  text-transform: uppercase;
-  letter-spacing: 1.1px;
-  font-size: calc(0.5rem + 0.8vw)!important;
+  text-transform: uppercase !important;
 }
 
 
