@@ -77,6 +77,16 @@
   --bs-link-hover-color: #1826c2;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
+  /*new*/
+  /* Theme Colors */
+
+  --primary: #5b3cc4; /* soft royal purple – güven ve teknoloji */
+  --secondary: #00c2ff; /* modern mavi – AI ve yenilik hissi */
+  --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
+  --text-dark: #212529;
+  --text-muted: #6c757d;
+
+
 }
 
 *,
@@ -884,7 +894,7 @@ progress {
 
 .g-5,
 .gx-5 {
-  --bs-gutter-x: 3rem;
+  --bs-gutter-x: 3.5rem;
 }
 
 .g-5,
@@ -8162,8 +8172,8 @@ textarea.form-control-lg {
 
 .text-uppercase {
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: clamp(0.75rem, 1.3vw, 0.95rem);
+  letter-spacing: 1.1px;
+  font-size: calc(0.5rem + 0.8vw)!important;
 }
 
 
@@ -8241,10 +8251,18 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-.text-muted {
+/*.text-muted {
   --bs-text-opacity: 1;
   color: #5a6268 !important;
+}*/
+p.lead {
+  line-height: 1.8;
+  font-size: 1.05rem;
 }
+.text-muted {
+  line-height: 1.75;
+}
+
 
 .text-black-50 {
   --bs-text-opacity: 1;
