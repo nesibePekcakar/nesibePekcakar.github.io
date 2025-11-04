@@ -4338,6 +4338,22 @@ textarea.form-control-lg {
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
+  .card img {
+  width: 100%;
+  height: auto;
+  max-height: 16rem; /* Görsellerin aşırı uzamasını engeller */
+  object-fit: cover; /* Görsel taşmadan alana oturur */
+  border-radius: var(--bs-card-inner-border-radius);
+  display: block;
+}
+
+/* Küçük ekranlar için biraz daha küçük yüksekliğe geçelim */
+@media (max-width: 768px) {
+  .card img {
+    max-height: 12rem;
+  }
+}
+
 }
 
 .accordion {
