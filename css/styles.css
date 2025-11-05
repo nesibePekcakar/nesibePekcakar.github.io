@@ -11,6 +11,15 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 :root {
+   --bs-primary: #3a0ca3; /* Electric Violet */
+  --bs-secondary: #4361ee; /* Bright Azure Blue */
+  --bs-accent: #f72585; /* Futuristic Magenta */
+  --bs-primary-rgb: 58, 12, 163;
+  --bs-secondary-rgb: 67, 97, 238;
+  --bs-link-color: var(--bs-secondary);
+  --bs-link-hover-color: var(--bs-accent);
+  --bs-gradient: linear-gradient(135deg, var(--bs-primary), var(--bs-secondary), var(--bs-accent));
+
   --bs-blue: #1e30f3;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
