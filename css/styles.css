@@ -77,16 +77,6 @@
   --bs-link-hover-color: #1826c2;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
-  /*new*/
-  /* Theme Colors */
-
-  --primary: #5b3cc4; /* soft royal purple – güven ve teknoloji */
-  --secondary: #00c2ff; /* modern mavi – AI ve yenilik hissi */
-  --gradient: linear-gradient(90deg, var(--primary), var(--secondary));
-  --text-dark: #212529;
-  --text-muted: #6c757d;
-
-
 }
 
 *,
@@ -894,7 +884,7 @@ progress {
 
 .g-5,
 .gx-5 {
-  --bs-gutter-x: 3.5rem;
+  --bs-gutter-x: 3rem;
 }
 
 .g-5,
@@ -4214,9 +4204,6 @@ textarea.form-control-lg {
   flex: 1 1 auto;
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 .card-title {
@@ -4341,26 +4328,6 @@ textarea.form-control-lg {
   .card-group > .card:not(:first-child) .card-footer {
     border-bottom-left-radius: 0;
   }
-.card img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 16 / 9; /* Her görseli aynı oranda gösterir */
-  object-fit: cover; /* Görsel taşmadan kesilir */
-  border-radius: var(--bs-card-inner-border-radius);
-  display: block;
-  margin: 0 auto;
-}
-
-
-
-/* Küçük ekranlar için orana biraz daha uygun bir yükseklik */
-@media (max-width: 768px) {
-  .card img {
-    aspect-ratio: 4 / 3;
-  }
-}
-
-
 }
 
 .accordion {
@@ -8197,7 +8164,6 @@ textarea.form-control-lg {
   text-transform: uppercase !important;
 }
 
-
 .text-capitalize {
   text-transform: capitalize !important;
 }
@@ -8272,18 +8238,10 @@ textarea.form-control-lg {
   color: rgba(var(--bs-body-color-rgb), var(--bs-text-opacity)) !important;
 }
 
-/*.text-muted {
-  --bs-text-opacity: 1;
-  color: #5a6268 !important;
-}*/
-p.lead {
-  line-height: 1.8;
-  font-size: 1.05rem;
-}
 .text-muted {
-  line-height: 1.75;
+  --bs-text-opacity: 1;
+  color: #6c757d !important;
 }
-
 
 .text-black-50 {
   --bs-text-opacity: 1;
@@ -11628,23 +11586,14 @@ html {
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
-  /*new*/
-   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 .profile .profile-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  /*
-  height: 90vw;
+  height: 80vw;
   max-height: 45rem;
   position: absolute;
   bottom: 0;
   left: 50%;
-  transform: translateX(-50%);*/
+  transform: translateX(-50%);
 }
 .profile .dots-1 {
   position: absolute;
@@ -11689,7 +11638,7 @@ html {
     width: 60vw;
   }
   .profile .profile-img {
-    height: 75vw;
+    height: 65vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11714,7 +11663,7 @@ html {
     width: 50vw;
   }
   .profile .profile-img {
-    height: 65vw;
+    height: 55vw;
   }
   .profile .dots-1 {
     width: 3vw;
@@ -11739,7 +11688,7 @@ html {
     width: 40vw;
   }
   .profile .profile-img {
-    height: 50vw;
+    height: 45vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
@@ -11764,7 +11713,7 @@ html {
     width: 35vw;
   }
   .profile .profile-img {
-    height: 45vw;
+    height: 40vw;
   }
   .profile .dots-1 {
     width: 1.5vw;
