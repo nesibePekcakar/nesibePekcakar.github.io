@@ -35,7 +35,7 @@
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
   --bs-primary: #439A97;
-  --bs-secondary: #CBEDD5;
+  --bs-secondary: #483AA0;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
@@ -43,7 +43,7 @@
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
   --bs-primary-rgb: rgb(67, 154, 151);
-  --bs-secondary-rgb: rgb(203, 237, 213);
+  --bs-secondary-rgb: rgb(121, 101, 193);
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -52,15 +52,11 @@
   --bs-dark-rgb: 33, 37, 41;
   --bs-white-rgb: 255, 255, 255;
   --bs-black-rgb: 0, 0, 0;
-  --bs-body-color-rgb: 33, 37, 41;
+  --bs-body-color-rgb: rgb(33, 37, 41);
   --bs-body-bg-rgb: 255, 255, 255;
   --bs-font-sans-serif: "Plus Jakarta Sans";
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
---bs-gradient: linear-gradient(
-  180deg,
-  rgba(var(--bs-primary-rgb), 0.85),
-  rgba(var(--bs-secondary-rgb), 0.85)
-);
+--bs-gradient: linear-gradient(315deg, var(--bs-primary) 0%, var(--bs-secondary) 100%);
   --bs-body-font-family: var(--bs-font-sans-serif);
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -2846,8 +2842,49 @@ textarea.form-control-lg {
   border-color: var(--bs-btn-disabled-border-color);
   opacity: var(--bs-btn-disabled-opacity);
 }
-
 .btn-primary {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #439A97; /* YENİ: Ana arka plan rengi */
+  --bs-btn-border-color: #439A97; /* YENİ: Kenarlık rengi */
+  
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #3A8481; /* YENİ: Üzerine gelince koyu ton */
+  --bs-btn-hover-border-color: #3A8481; /* YENİ */
+  
+  /* Focus gölgesini de RGB değişkenini kullanarak düzeltelim */
+  --bs-btn-focus-shadow-rgb: 67, 154, 151; 
+  
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #357A78; /* YENİ: Basıldığında daha koyu ton */
+  --bs-btn-active-border-color: #357A78; /* YENİ */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #439A97;
+  --bs-btn-disabled-border-color: #439A97;
+}
+.btn-secondary {
+  --bs-btn-color: #fff; /* Metin rengi okunabilirlik için beyaz (eski kodda siyahtı) */
+  --bs-btn-bg: #7965C1; /* YENİ: Ana arka plan rengi */
+  --bs-btn-border-color: #7965C1; /* YENİ: Kenarlık rengi */
+  
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #6E5BAE; /* YENİ: Üzerine gelince koyu ton */
+  --bs-btn-hover-border-color: #6E5BAE; /* YENİ */
+  
+  /* Focus gölgesini de RGB değişkenini kullanarak düzeltelim */
+  --bs-btn-focus-shadow-rgb: 121, 101, 193;
+  
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #65529F; /* YENİ: Basıldığında daha koyu ton */
+  --bs-btn-active-border-color: #65529F; /* YENİ */
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  
+  --bs-btn-disabled-color: #fff;
+  --bs-btn-disabled-bg: #7965C1;
+  --bs-btn-disabled-border-color: #7965C1;
+}
+/*.btn-primary {
   --bs-btn-color: #fff;
   --bs-btn-bg: #1e30f3;
   --bs-btn-border-color: #1e30f3;
@@ -2879,7 +2916,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-color: #000;
   --bs-btn-disabled-bg: #e21e80;
   --bs-btn-disabled-border-color: #e21e80;
-}
+}*/
 
 .btn-success {
   --bs-btn-color: #fff;
@@ -2982,8 +3019,54 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: #212529;
   --bs-btn-disabled-border-color: #212529;
 }
-
 .btn-outline-primary {
+  /* Normal Durum */
+  --bs-btn-color: #439A97; /* YENİ: Metin rengi ana renk olacak */
+  --bs-btn-border-color: #439A97; /* YENİ: Kenarlık rengi ana renk olacak */
+  
+  /* Hover Durumu */
+  --bs-btn-hover-color: #fff; /* Metin rengi beyaz olacak */
+  --bs-btn-hover-bg: #439A97; /* YENİ: Arka plan ana renk olacak */
+  --bs-btn-hover-border-color: #439A97; /* YENİ: Kenarlık ana renk olacak */
+  
+  /* Focus ve Active Durumları */
+  --bs-btn-focus-shadow-rgb: 67, 154, 151; /* YENİ: Birincil rengin RGB'si */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #439A97;
+  --bs-btn-active-border-color: #439A97;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  
+  /* Engelli Durum (Disabled) */
+  --bs-btn-disabled-color: #439A97;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #439A97;
+  --bs-gradient: none;
+}
+.btn-outline-secondary {
+  /* Normal Durum */
+  --bs-btn-color: #7965C1; /* YENİ: Metin rengi ikincil renk olacak */
+  --bs-btn-border-color: #7965C1; /* YENİ: Kenarlık rengi ikincil renk olacak */
+  
+  /* Hover Durumu */
+  --bs-btn-hover-color: #fff; /* Metin rengini beyaz yaptık */
+  --bs-btn-hover-bg: #7965C1; /* YENİ: Arka plan ikincil renk olacak */
+  --bs-btn-hover-border-color: #7965C1; /* YENİ: Kenarlık ikincil renk olacak */
+  
+  /* Focus ve Active Durumları */
+  --bs-btn-focus-shadow-rgb: 121, 101, 193; /* YENİ: İkincil rengin RGB'si */
+  --bs-btn-active-color: #fff;
+  --bs-btn-active-bg: #7965C1;
+  --bs-btn-active-border-color: #7965C1;
+  --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+  
+  /* Engelli Durum (Disabled) */
+  --bs-btn-disabled-color: #7965C1;
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: #7965C1;
+  --bs-gradient: none;
+}
+
+/*.btn-outline-primary {
   --bs-btn-color: #1e30f3;
   --bs-btn-border-color: #1e30f3;
   --bs-btn-hover-color: #fff;
@@ -3015,7 +3098,7 @@ textarea.form-control-lg {
   --bs-btn-disabled-bg: transparent;
   --bs-btn-disabled-border-color: #e21e80;
   --bs-gradient: none;
-}
+}*/
 
 .btn-outline-success {
   --bs-btn-color: #198754;
@@ -4658,8 +4741,24 @@ textarea.form-control-lg {
   z-index: 2;
   padding: 1.25rem 1rem;
 }
-
 .alert-primary {
+  --bs-alert-color: #224D4B; /* YENİ: Koyu metin rengi */
+  --bs-alert-bg: #D4E7E6; /* YENİ: Çok açık arka plan rengi */
+  --bs-alert-border-color: #C7DFDD; /* YENİ: Kenarlık rengi */
+}
+.alert-primary .alert-link {
+  color: #1A3B39; /* YENİ: Linkler için en koyu ton */
+}
+.alert-secondary {
+  --bs-alert-color: #3D3260; /* YENİ: Koyu metin rengi */
+  --bs-alert-bg: #E5E0F0; /* YENİ: Çok açık arka plan rengi */
+  --bs-alert-border-color: #D1C7E0; /* YENİ: Kenarlık rengi */
+}
+.alert-secondary .alert-link {
+  color: #2F274A; /* YENİ: Linkler için en koyu ton */
+}
+
+/*.alert-primary {
   --bs-alert-color: #121d92;
   --bs-alert-bg: #d2d6fd;
   --bs-alert-border-color: #bcc1fb;
@@ -4676,7 +4775,7 @@ textarea.form-control-lg {
 .alert-secondary .alert-link {
   color: #6d0e3e;
 }
-
+*/
 .alert-success {
   --bs-alert-color: #0f5132;
   --bs-alert-bg: #d1e7dd;
@@ -11559,13 +11658,13 @@ html {
 }
 
 .bg-gradient-primary-to-secondary {
-  background: #1e30f3;
-  background: linear-gradient(135deg, #1e30f3 0%, #e21e80 100%);
+  background: #439A97;
+  background: linear-gradient(315deg, #439A97 0%, #483AA0 100%);
 }
 
 .text-gradient {
 /* Eski sabitlemeyi, yeni renklerinizle değiştirin: */
-background: -webkit-linear-gradient(315deg, #439A97 0%, #CBEDD5 100%);
+background: -webkit-linear-gradient(315deg, #439A97 0%, #483AA0 100%);
 /* Standart (modern) tarayıcılar için -webkit- öneki olmadan da eklenmesi önerilir */
 background: linear-gradient(315deg, #439A97 0%, #CBEDD5 100%);
   -webkit-background-clip: text;
@@ -11596,7 +11695,7 @@ background: linear-gradient(315deg, #439A97 0%, #CBEDD5 100%);
 }
 .profile .profile-img {
   height: 80vw;
-  max-height: 45rem;
+  max-height: 40rem;
   position: absolute;
   bottom: 0;
   left: 50%;
