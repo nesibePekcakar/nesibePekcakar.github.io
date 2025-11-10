@@ -10,17 +10,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
 :root {
-   --bs-primary: #439A97; 
-  --bs-secondary: #62B6B7; 
-  --bs-accent: #97DECE; 
-  --bs-primary-rgb: 67, 154, 151;
-  --bs-secondary-rgb: 98, 182, 183;
-  --bs-link-color: var(--bs-secondary);
-  --bs-link-hover-color: var(--bs-accent);
-  --bs-gradient: linear-gradient(135deg, var(--bs-primary), var(--bs-secondary), var(--bs-accent));
-
   --bs-blue: #1e30f3;
   --bs-indigo: #6610f2;
   --bs-purple: #6f42c1;
@@ -44,12 +34,16 @@
   --bs-gray-700: #495057;
   --bs-gray-800: #343a40;
   --bs-gray-900: #212529;
+  --bs-primary: #439A97;
+  --bs-secondary: #CBEDD5;
   --bs-success: #198754;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
   --bs-light: #f8f9fa;
   --bs-dark: #212529;
+  --bs-primary-rgb: rgb(67, 154, 151);
+  --bs-secondary-rgb: rgb(203, 237, 213);
   --bs-success-rgb: 25, 135, 84;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
@@ -79,11 +73,11 @@
   --bs-border-radius-xl: 1rem;
   --bs-border-radius-2xl: 2rem;
   --bs-border-radius-pill: 50rem;
-  --bs-link-color: #1e30f3;
-  --bs-link-hover-color: #1826c2;
+  --bs-link-color: #97DECE;
+  --bs-link-hover-color: #62B6B7;
   --bs-code-color: #e21e80;
   --bs-highlight-bg: #fff3cd;
-}*/
+}
 
 *,
 *::before,
@@ -4280,9 +4274,6 @@ textarea.form-control-lg {
 .card-img-top,
 .card-img-bottom {
   width: 100%;
-    height: 100%;             /* Make image take full height of the card */
-  object-fit: cover;        /* Cover ensures the image fills the card without stretching */
-  border-radius: var(--bs-card-inner-border-radius);
 }
 
 .card-img,
@@ -11595,7 +11586,6 @@ html {
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
-
 }
 .profile .profile-img {
   height: 80vw;
@@ -11604,8 +11594,6 @@ html {
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
-
 }
 .profile .dots-1 {
   position: absolute;
