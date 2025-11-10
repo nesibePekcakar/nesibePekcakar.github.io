@@ -11664,9 +11664,9 @@ html {
 
 .text-gradient {
 /* Eski sabitlemeyi, yeni renklerinizle değiştirin: */
-background: -webkit-linear-gradient(315deg, #439A97 0%, #483AA0 100%);
+background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 /* Standart (modern) tarayıcılar için -webkit- öneki olmadan da eklenmesi önerilir */
-background: linear-gradient(315deg, #439A97 0%, #CBEDD5 100%);
+background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
