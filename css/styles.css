@@ -11837,4 +11837,18 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     width: 1.5vw;
     left: -2vw;
   }
+/* Navigasyon Çubuğuna Özel Gradyan Stili */
+.navbar-gradient {
+    /* Daha önce metin gradyanı için kullandığımız renkleri buraya uyguluyoruz */
+    background: #439A97; /* Tarayıcı gradyanı desteklemezse görülecek sabit renk */
+    background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
+    background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
+}
+
+/* Navbar içindeki tüm link ve metinleri okunabilirlik için beyaz yapın */
+/* Eğer linkler beyaz olmazsa okunamaz */
+.navbar-gradient .nav-link,
+.navbar-gradient .navbar-brand {
+    color: #fff !important; 
+}
 }
