@@ -4264,6 +4264,7 @@ textarea.form-control-lg {
   border: var(--bs-card-border-width) solid var(--bs-card-border-color);
   border-radius: var(--bs-card-border-radius);
 }
+
 .card > hr {
   margin-right: 0;
   margin-left: 0;
@@ -4292,6 +4293,7 @@ textarea.form-control-lg {
   padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x);
   color: var(--bs-card-color);
 }
+
 
 .card-title {
   margin-bottom: var(--bs-card-title-spacer-y);
@@ -11866,7 +11868,7 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 @media (min-width: 992px) {
     /* Görsel kapsayıcısı */
     .project-img-container {
-        width: 40%;
+        width: 60%;
         /* Görselin kartın sağ (veya sol) kenarını yuvarlamasını sağlar */
         border-radius: 0 0.25rem 0.25rem 0; 
         /* Kart 2 (Görseli sağda olan) için bu kuralı tersine çevireceğiz */
