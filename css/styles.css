@@ -3901,7 +3901,11 @@ textarea.form-control-lg {
   flex-basis: 100%;
   flex-grow: 1;
   align-items: center;
+  background: linear-gradient(to bottom, #7965C1, #439A97); /* VEYA SADECE TEK RENK #7965C1 */
 }
+.navbar-collapse .nav-link {
+        color: white !important; 
+    }
 
 .navbar-toggler {
   padding: var(--bs-navbar-toggler-padding-y) var(--bs-navbar-toggler-padding-x);
