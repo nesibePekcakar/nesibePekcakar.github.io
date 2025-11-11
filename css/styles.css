@@ -11862,6 +11862,33 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 .navbar-gradient .navbar-brand {
     color: #fff !important; 
 }
+/* 🚀 YENİ KISIM: Mobil Görünüm İçin Düzenlemeler (Media Query) */
+/* Bootstrap'in varsayılan küçük ekran kırma noktası (genellikle 576px civarı) */
+@media (max-width: 991.98px) {
+    /* Navbar'ın katlanan kısmını hedef alıyoruz */
+    .navbar-collapse {
+        /*
+        Mobil menü açıldığında gradyanı bu alana da uygula.
+        Bu, menü katlandığında (açıldığında) tüm menü içeriğinin arka planının gradyan olmasını sağlar.
+        */
+        background: #439A97;
+        background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
+        background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
+        
+        /* Opsiyonel: Mobil menüye de yuvarlak kenarlar verin */
+        border-radius: 0 0 3px 3px; 
+        
+        /* Menü içeriği ile kenarlar arasında boşluk bırakmak için */
+        padding: 10px;
+    }
+
+    /* Eğer menü katlandığında logo ve toggle butonu arasında boşluk olursa bu kuralı kullanabilirsiniz */
+    .navbar-toggler {
+        /* Mobil menü butonuna da gradyan verilebilir (isteğe bağlı) */
+        border-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
 /* Projects görsellerinin boyutunu kontrol etmek için yeni sınıflar */
 /* --- PROJE KARTLARI İÇİN YENİ RESPONSIVE DÜZENLEME --- */
 
