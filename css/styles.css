@@ -11692,15 +11692,15 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
   margin-top: 5vw;
   max-height: 40rem;
   max-width: 40rem;
-  overflow: hidden!important;
 }
 .profile .profile-img {
-  height: 80vw;
+  height: 75vw;
   max-height: 40rem;
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
+  display: block;
 }
 .profile .dots-1 {
   position: absolute;
@@ -11845,7 +11845,7 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     /* YENİ: Kenarları yuvarlaklaştırma */
-    border-radius: 10px; /* İstediğiniz yuvarlaklık derecesini ayarlayın (örneğin 10px) */
+    border-radius: 5px; /* İstediğiniz yuvarlaklık derecesini ayarlayın (örneğin 10px) */
     
     /* YENİ (Opsiyonel): Dolgu ayarı */
     padding-top: 0.5rem; 
@@ -11870,5 +11870,18 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 /* Bu görsellerin dikeyde tam ortalanmasını sağlayın */
 .w-40 img {
     max-height: 100%;
+}
+@media (max-width: 991.98px) {
+    
+    /* 1. Proje kartlarındaki metin ve görsel %100 genişliğe çıksın (Alt alta yığılınca) */
+    .card .w-60,
+    .card .w-40 {
+        width: 100% !important;
+    }
+    
+    /* 2. Kart içindeki Flexbox yönünü mobil için dikey yapalım (Öğeler alt alta dizilsin) */
+    .card .d-flex {
+        flex-direction: column;
+    }
 }
 }
