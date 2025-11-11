@@ -43,14 +43,27 @@
                         <div class="p-5 project-text-content">
                             <h2 class="fw-bolder">AI Error Log Analyzer</h2>
                             <p>
-                                    Developed an AI-powered web system that analyzes and explains software error logs. 
-                                    Fine-tuned the Mistral-7B model using real and synthetic data, and implemented the entire system using 
-                                    Python, .NET, and Blazor. The project reduces manual debugging by providing intelligent insights 
-                                    and automated suggestions.
-                                </p>
-                                <p class="text-muted small mb-0">
-                                    <strong>Technologies:</strong> Python · .NET · Blazor · Mistral-7B · LLMs
-                                </p>
+          Developed an AI-powered web system that analyzes and explains software error logs. 
+          Fine-tuned multiple Mistral-7B and TinyLLaMA models using custom datasets in both English and Turkish, 
+          implemented the backend in .NET and built a full connection pipeline to interact with the models in real time.
+        </p>
+
+        <p>
+          The project integrates multilingual understanding, intelligent debugging suggestions, 
+          and an optimized model inference tunnel for seamless AI communication.
+        </p>
+
+        <ul class="text-muted small mb-3">
+          <strong>Key Modules:</strong>
+          <li><strong>Mistral Error Helper (EN):</strong> Fine-tuned model for English debugging explanations.</li>
+          <li><strong>Mistral Turkish Error Helper v2:</strong> Turkish variant optimized for localized error interpretation.</li>
+          <li><strong>Mistral-7B Error Solver:</strong> Early prototype with multilingual reasoning capability.</li>
+          <li><strong>Slidified LLaMA Error Dataset:</strong> Custom dataset built from structured error-solution pairs for model fine-tuning.</li>
+        </ul>
+
+        <p class="text-muted small mb-0">
+          <strong>Technologies:</strong> Python · .NET · Blazor · Hugging Face · Mistral-7B · TinyLLaMA · PEFT · Google Colab · wandb · JSONL
+        </p>
                             </div>
 
                         <div class="project-img-container">
@@ -66,15 +79,19 @@
                     <div class="d-flex align-items-center flex-column flex-lg-row-reverse">
                         
                          <div class="p-5 project-text-content">
-                            <h2 class="fw-bolder">Prompt Optimizer</h2>
-                            <p>
-                                    Designed and implemented a personalized prompt optimization system using LLaMA-3B-Instruct with LoRA fine-tuning. 
-                                    Built a Python preprocessing pipeline to enhance model output quality and achieved a 59% improvement in accuracy. 
-                                    The project ranked among the top six at the Graduation and Big Year Fair (GBYF).
-                                </p>
-                                <p class="text-muted small mb-0">
-                                    <strong>Technologies:</strong> Python · LLaMA · LoRA · Hugging Face · Google Colab
-                                </p>
+                            <h2 class="fw-bolder">AIPrompt – Personalized Prompt Optimization System</h2>
+                             <p>
+          Developed an intelligent web system that personalizes prompt generation for university-level Computer Engineering students. 
+          The system uses user profiles — including topic proficiency, English level, and preferred response format — to optimize 
+          how large language models (LLMs) answer questions in a personalized and comprehensible way.
+        </p>
+        <p>
+          Trained using custom-built datasets and integrated with multiple AI models (ChatGPT, DeepSeek, Claude), 
+          AIPrompt enables adaptive learning experiences where students receive explanations at the level they can best understand.
+        </p>
+        <p class="text-muted small mb-0">
+          <strong>Technologies:</strong> Python · HTML · OpenAI API · Flask · JavaScript · Prompt Engineering · Dataset Curation
+        </p>
                              </div>
                         
                         <div class="project-img-container">
@@ -107,6 +124,49 @@
                     </div>
                 </div>
             </div>
+
+
+            <div class="col-12 mb-5">
+  <div class="card overflow-hidden shadow rounded-4 border-0">
+    <div class="d-flex align-items-center flex-column flex-lg-row">
+      <div class="p-5 project-text-content">
+        <h2 class="fw-bolder">Preprocessing Data Pipeline</h2>
+        <p>
+          Developed a modular data preprocessing pipeline to clean, normalize, and augment training datasets for LLM fine-tuning. 
+          Ensured data consistency, reduced noise, and improved model accuracy through advanced text normalization and tokenization techniques.
+        </p>
+        <p class="text-muted small mb-0">
+          <strong>Technologies:</strong> Python · Pandas · NumPy · Scikit-learn
+        </p>
+      </div>
+      <div class="project-img-container">
+        <img class="img-fluid" src="assets/project/dataprep.png" alt="Preprocessing Data Preview" />
+      </div>
+    </div>
+  </div>
+</div>
+    <div class="col-12 mb-5">
+  <div class="card overflow-hidden shadow rounded-4 border-0">
+    <div class="d-flex align-items-center flex-column flex-lg-row-reverse">
+      <div class="p-5 project-text-content">
+        <h2 class="fw-bolder">LLM Fine-Tuning & Model Evaluation</h2>
+        <p>
+          Conducted multiple LLM fine-tuning experiments on Google Colab, including Mistral-7B and TinyLLaMA models. 
+          Focused on optimizing training hyperparameters, evaluation metrics, and data sampling to achieve efficient model convergence.
+        </p>
+        <p class="text-muted small mb-0">
+          <strong>Technologies:</strong> Hugging Face Transformers · Google Colab · PyTorch · wandb
+        </p>
+        <a href="https://huggingface.co/nesibnnur" target="_blank" class="btn btn-sm btn-primary mt-3">View on Hugging Face</a>
+      </div>
+      <div class="project-img-container">
+        <img class="img-fluid" src="assets/project/colabtrain.png" alt="Model Training Preview" />
+      </div>
+    </div>
+  </div>
+</div>
+
+
             
         </div>
     </div>
