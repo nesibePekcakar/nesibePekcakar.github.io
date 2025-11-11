@@ -11684,160 +11684,143 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
   font-size: 1.5rem;
 }
 
+/* Başlangıç ayarları (max-height değerleri zaten doğru) */
 .profile {
-  position: relative;
-  height: 75vw;
-  width: 75vw;
-  border-radius: 5vw;
-  margin-top: 5vw;
-  max-height: 40rem;
-  max-width: 40rem;
+    position: relative;
+    height: 75vw;
+    width: 75vw;
+    border-radius: 5vw;
+    margin-top: 5vw;
+    max-height: 40rem;
+    max-width: 40rem;
+    /* YENİ: Dışarı taşan içeriği kes */
+    overflow: hidden; 
 }
 .profile .profile-img {
-  height: 75vw;
-  max-height: 40rem;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  display: block;
-}
-.profile .dots-1 {
-  position: absolute;
-  width: 3vw;
-  right: 1.5vw;
-  top: 4vw;
-}
-.profile .dots-1 svg {
-  fill: #fff;
-}
-.profile .dots-2 {
-  position: absolute;
-  width: 3vw;
-  right: -4vw;
-  top: 6.05vw;
-}
-.profile .dots-2 svg {
-  fill: #483AA0;
-}
-.profile .dots-3 {
-  position: absolute;
-  width: 3vw;
-  left: 1.5vw;
-  bottom: 6.05vw;
-}
-.profile .dots-3 svg {
-  fill: #fff;
-}
-.profile .dots-4 {
-  position: absolute;
-  width: 3vw;
-  left: -4vw;
-  bottom: 4vw;
-}
-.profile .dots-4 svg {
-  fill: #483AA0;
+    height: 75vw;
+    max-height: 40rem;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    /* YENİ: Görselin kapsadığı alanı koruyarak doldurmasını sağla */
+    object-fit: cover; 
 }
 
+/* -------------------------------------------------------------------------- */
+/* DÜZELTİLMİŞ RESPONSIVE KODLAR */
+/* -------------------------------------------------------------------------- */
+
 @media (min-width: 576px) {
-  .profile {
-    height: 60vw;
-    width: 60vw;
-  }
-  .profile .profile-img {
-    height: 65vw;
-  }
-  .profile .dots-1 {
-    width: 3vw;
-    right: 1.5vw;
-  }
-  .profile .dots-2 {
-    width: 3vw;
-    right: -4vw;
-  }
-  .profile .dots-3 {
-    width: 3vw;
-    left: 1.5vw;
-  }
-  .profile .dots-4 {
-    width: 3vw;
-    left: -4vw;
-  }
+    .profile {
+        height: 60vw;
+        width: 60vw;
+    }
+    .profile .profile-img {
+        /* Kapsayıcı ile aynı yüksekliği kullanıyoruz */
+        height: 60vw; 
+    }
+    /* Dots kurallarını olduğu gibi bırakın */
+    .profile .dots-1 {
+        width: 3vw;
+        right: 1.5vw;
+    }
+    .profile .dots-2 {
+        width: 3vw;
+        right: -4vw;
+    }
+    .profile .dots-3 {
+        width: 3vw;
+        left: 1.5vw;
+    }
+    .profile .dots-4 {
+        width: 3vw;
+        left: -4vw;
+    }
 }
 @media (min-width: 768px) {
-  .profile {
-    height: 50vw;
-    width: 50vw;
-  }
-  .profile .profile-img {
-    height: 55vw;
-  }
-  .profile .dots-1 {
-    width: 3vw;
-    right: 1.5vw;
-  }
-  .profile .dots-2 {
-    width: 3vw;
-    right: -4vw;
-  }
-  .profile .dots-3 {
-    width: 3vw;
-    left: 1.5vw;
-  }
-  .profile .dots-4 {
-    width: 3vw;
-    left: -4vw;
-  }
+    .profile {
+        height: 50vw;
+        width: 50vw;
+    }
+    .profile .profile-img {
+        /* Kapsayıcı ile aynı yüksekliği kullanıyoruz */
+        height: 50vw; 
+    }
+    /* Dots kurallarını olduğu gibi bırakın */
+    .profile .dots-1 {
+        width: 3vw;
+        right: 1.5vw;
+    }
+    .profile .dots-2 {
+        width: 3vw;
+        right: -4vw;
+    }
+    .profile .dots-3 {
+        width: 3vw;
+        left: 1.5vw;
+    }
+    .profile .dots-4 {
+        width: 3vw;
+        left: -4vw;
+    }
 }
 @media (min-width: 992px) {
-  .profile {
-    height: 40vw;
-    width: 40vw;
-  }
-  .profile .profile-img {
-    height: 45vw;
-  }
-  .profile .dots-1 {
-    width: 1.5vw;
-    right: 0.75vw;
-  }
-  .profile .dots-2 {
-    width: 1.5vw;
-    right: -2vw;
-  }
-  .profile .dots-3 {
-    width: 1.5vw;
-    left: 0.75vw;
-  }
-  .profile .dots-4 {
-    width: 1.5vw;
-    left: -2vw;
-  }
+    .profile {
+        height: 40vw;
+        width: 40vw;
+    }
+    .profile .profile-img {
+        /* Kapsayıcı ile aynı yüksekliği kullanıyoruz */
+        height: 40vw; 
+    }
+    /* Dots kurallarını olduğu gibi bırakın */
+    .profile .dots-1 {
+        width: 1.5vw;
+        right: 0.75vw;
+    }
+    .profile .dots-2 {
+        width: 1.5vw;
+        right: -2vw;
+    }
+    .profile .dots-3 {
+        width: 1.5vw;
+        left: 0.75vw;
+    }
+    .profile .dots-4 {
+        width: 1.5vw;
+        left: -2vw;
+    }
 }
 @media (min-width: 1200px) {
-  .profile {
-    height: 35vw;
-    width: 35vw;
-  }
-  .profile .profile-img {
-    height: 40vw;
-  }
-  .profile .dots-1 {
-    width: 1.5vw;
-    right: 0.75vw;
-  }
-  .profile .dots-2 {
-    width: 1.5vw;
-    right: -2vw;
-  }
-  .profile .dots-3 {
-    width: 1.5vw;
-    left: 0.75vw;
-  }
-  .profile .dots-4 {
-    width: 1.5vw;
-    left: -2vw;
-  }
+    .profile {
+        height: 35vw;
+        width: 35vw;
+    }
+    .profile .profile-img {
+        /* Kapsayıcı ile aynı yüksekliği kullanıyoruz */
+        height: 35vw; 
+    }
+    /* Dots kurallarını olduğu gibi bırakın */
+    .profile .dots-1 {
+        width: 1.5vw;
+        right: 0.75vw;
+    }
+    .profile .dots-2 {
+        width: 1.5vw;
+        right: -2vw;
+    }
+    .profile .dots-3 {
+        width: 1.5vw;
+        left: 0.75vw;
+    }
+    .profile .dots-4 {
+        width: 1.5vw;
+        left: -2vw;
+    }
+    /* Diğer eklediğiniz kodlar (navbar-gradient, w-40/w-60 vb.) burada kalmaya devam edebilir */
+}
 /* Navigasyon Çubuğuna Özel Gradyan Stili */
 .navbar-gradient {
     /* Daha önce metin gradyanı için kullandığımız renkleri buraya uyguluyoruz */
@@ -11845,7 +11828,7 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     /* YENİ: Kenarları yuvarlaklaştırma */
-    border-radius: 5px; /* İstediğiniz yuvarlaklık derecesini ayarlayın (örneğin 10px) */
+    border-radius: 3px; /* İstediğiniz yuvarlaklık derecesini ayarlayın (örneğin 10px) */
     
     /* YENİ (Opsiyonel): Dolgu ayarı */
     padding-top: 0.5rem; 
