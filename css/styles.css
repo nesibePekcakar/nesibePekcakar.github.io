@@ -11971,4 +11971,34 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     /* Kart 1 ve 3'ün mobil görünümde görseli üste almasını sağlar */
 
 }
+/* ================================================================= */
+/* CUSTOM MOBILE FONT SIZE ADJUSTMENTS */
+/* Target screens smaller than 576px (Extra-Small Devices - Phones) */
+/* ================================================================= */
+@media (max-width: 576px) {
+    /* Target the text inside the header badge. 
+    You can adjust '0.75rem' to '0.65rem' or '0.8rem' based on how small you need it.
+    The !important flag ensures this rule overrides the default .fs-7 or Bootstrap styling.
+    */
+    .header .badge.fs-7 .text-uppercase {
+        font-size: 0.75rem !important; 
+        line-height: 1.2 !important; /* Helps prevent cutting off the text if it wraps to two lines */
+        padding: 0.25rem 0.5rem !important; /* Optionally reduce padding on the badge itself */
+    }
+}
+/* ================================================================= */
+/* CUSTOM MOBILE NAVBAR GRADIENT FIX */
+/* Target screens smaller than 992px (Mobile and Tablet) */
+/* ================================================================= */
+@media (max-width: 991.98px) {
+    /* IMPORTANT: We are targeting the element with the ID #mainNav, 
+    which is the standard ID for the main navigation bar in these templates.
+    If your <nav> element uses a different ID or class, replace '#mainNav' 
+    with your actual selector (e.g., '.navbar').
+    */
+    #mainNav { 
+        /* The gradient value extracted from your .bg-gradient-primary-to-secondary class */
+        background: linear-gradient(315deg, #439A97 0%, #483AA0 100%) !important;
+    }
+}
 }
