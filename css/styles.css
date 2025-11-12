@@ -11842,52 +11842,56 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     width: 1.5vw;
     left: -2vw;
   }
-/* Navigasyon Çubuğuna Özel Gradyan Stili */
+/* Navigasyon Çubuğuna Özel Gradyan Stili *//*
 .navbar-gradient {
-    /* Daha önce metin gradyanı için kullandığımız renkleri buraya uyguluyoruz */
-    background: #439A97; /* Tarayıcı gradyanı desteklemezse görülecek sabit renk */
+    background: #439A97; 
     background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
-    /* YENİ: Kenarları yuvarlaklaştırma */
-    border-radius: 3px; /* İstediğiniz yuvarlaklık derecesini ayarlayın (örneğin 10px) */
+    border-radius: 3px;
     
-    /* YENİ (Opsiyonel): Dolgu ayarı */
     padding-top: 0.5rem; 
     padding-bottom: 0.5rem;
 }
 
-/* Navbar içindeki tüm link ve metinleri okunabilirlik için beyaz yapın */
-/* Eğer linkler beyaz olmazsa okunamaz */
 .navbar-gradient .nav-link,
 .navbar-gradient .navbar-brand {
     color: #fff !important; 
+}*/
+.navbar-gradient {
+  background: var(--bs-gradient);
+  background-size: 200% 200%;
+  background-position: center;
+  color: #fff !important;
 }
-/* 🚀 YENİ KISIM: Mobil Görünüm İçin Düzenlemeler (Media Query) */
-/* Bootstrap'in varsayılan küçük ekran kırma noktası (genellikle 576px civarı) */
-@media (max-width: 991.98px) {
-    /* Navbar'ın katlanan kısmını hedef alıyoruz */
-    .navbar-collapse {
-        /*
-        Mobil menü açıldığında gradyanı bu alana da uygula.
-        Bu, menü katlandığında (açıldığında) tüm menü içeriğinin arka planının gradyan olmasını sağlar.
-        */
-        background: #439A97;
-        background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
-        background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
-        
-        /* Opsiyonel: Mobil menüye de yuvarlak kenarlar verin */
-        border-radius: 0 0 3px 3px; 
-        
-        /* Menü içeriği ile kenarlar arasında boşluk bırakmak için */
-        padding: 10px;
-    }
 
-    /* Eğer menü katlandığında logo ve toggle butonu arasında boşluk olursa bu kuralı kullanabilirsiniz */
-    .navbar-toggler {
-        /* Mobil menü butonuna da gradyan verilebilir (isteğe bağlı) */
-        border-color: rgba(255, 255, 255, 0.5);
-    }
+/* Mobil görünüm için tam genişlik ve sabit gradient */
+@media (max-width: 991.98px) {
+  .navbar-gradient,
+  .navbar-collapse {
+    background: var(--bs-gradient) !important;
+    background-size: cover !important;
+    color: #fff !important;
+  }
+
+  /* Menü açıkken de arka plan görünsün */
+  .navbar-collapse.show {
+    background: var(--bs-gradient) !important;
+    padding: 1rem;
+  }
+
+  /* Menü ikonunun (hamburger) rengini beyaz yapalım */
+  .navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
 }
+.navbar .nav-link {
+  color: #fff !important;
+}
+.navbar .nav-link:hover {
+  opacity: 0.85;
+}
+
+
 
 /* Projects görsellerinin boyutunu kontrol etmek için yeni sınıflar */
 /* --- PROJE KARTLARI İÇİN YENİ RESPONSIVE DÜZENLEME --- */
@@ -11971,23 +11975,17 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     /* Kart 1 ve 3'ün mobil görünümde görseli üste almasını sağlar */
 
 }
-/* ================================================================= */
-/* YENİ HTML YAPISINA GÖRE KESİN MOBİL YAZI BOYUTU ÇÖZÜMÜ */
-/* SADECE .badge VE .text-uppercase HEDEFLENİR */
-/* ================================================================= */
+
 @media (max-width: 576px) {
-    /* Metnin boyutunu küçült */
-    .badge .text-uppercase {
-        /* Bu değeri istediğiniz küçüklüğe göre ayarlayabilirsiniz (0.8rem, 0.75rem vb.) */
-        font-size: 0.75rem !important; 
-        line-height: 1.2 !important;
-    }
-    
-    /* İsteğe bağlı: Badge'in kendi padding'ini küçült */
-    .badge {
-        padding: 0.25rem 0.5rem !important; 
-    }
+  .badge {
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
+    white-space: normal !important;
+    display: inline-block !important;
+    text-align: center;
+  }
 }
+
 /* ================================================================= */
 /* KESİN MOBİL NAVBAR GRADIENT ÇÖZÜMÜ */
 /* max-width: 991.98px kuralı, mobil ve tablet için gradienti zorlar */
