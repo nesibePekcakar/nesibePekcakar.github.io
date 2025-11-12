@@ -3839,6 +3839,7 @@ textarea.form-control-lg {
   align-items: center;
   justify-content: space-between;
   padding: var(--bs-navbar-padding-y) var(--bs-navbar-padding-x);
+   background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3851,6 +3852,7 @@ textarea.form-control-lg {
   flex-wrap: inherit;
   align-items: center;
   justify-content: space-between;
+
 }
 .navbar-brand {
   padding-top: var(--bs-navbar-brand-padding-y);
@@ -11842,11 +11844,10 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     width: 1.5vw;
     left: -2vw;
   }
-/* Navigasyon Çubuğuna Özel Gradyan Stili *//*
+/* Navigasyon Çubuğuna Özel Gradyan Stili */
 .navbar-gradient {
     background: #439A97; 
     background: -webkit-linear-gradient(315deg, #439A97 0%, #7965C1 100%);
-    background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
     border-radius: 3px;
     
     padding-top: 0.5rem; 
@@ -11856,41 +11857,7 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 .navbar-gradient .nav-link,
 .navbar-gradient .navbar-brand {
     color: #fff !important; 
-}*/
-.navbar-gradient {
-  background: var(--bs-gradient);
-  background-size: 200% 200%;
-  background-position: center;
-  color: #fff !important;
 }
-
-/* Mobil görünüm için tam genişlik ve sabit gradient */
-@media (max-width: 991.98px) {
-  .navbar-gradient,
-  .navbar-collapse {
-    background: var(--bs-gradient) !important;
-    background-size: cover !important;
-    color: #fff !important;
-  }
-
-  /* Menü açıkken de arka plan görünsün */
-  .navbar-collapse.show {
-    background: var(--bs-gradient) !important;
-    padding: 1rem;
-  }
-
-  /* Menü ikonunun (hamburger) rengini beyaz yapalım */
-  .navbar-light .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-}
-.navbar .nav-link {
-  color: #fff !important;
-}
-.navbar .nav-link:hover {
-  opacity: 0.85;
-}
-
 
 
 /* Projects görsellerinin boyutunu kontrol etmek için yeni sınıflar */
@@ -11986,18 +11953,24 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
   }
 }
 
-/* ================================================================= */
-/* KESİN MOBİL NAVBAR GRADIENT ÇÖZÜMÜ */
-/* max-width: 991.98px kuralı, mobil ve tablet için gradienti zorlar */
-/* ================================================================= */
-@media (max-width: 991.98px) {
-    /* Navbar'ın ana konteynerini ve mobil menü açıldığında görünür olan .collapse öğesini hedefliyoruz */
-    .navbar-expand-lg, 
-    .navbar-collapse.collapse.show {
-        /* Daha önce bulduğunuz gradient değeri (315deg, #439A97, #483AA0) */
-        background: linear-gradient(315deg, #439A97 0%, #483AA0 100%) !important;
-        /* Tek renk (fallback) ve olası bir background-color kuralını da ezme */
-        background-color: #439A99 !important; 
-    }
+/* 📱 Mobilde badge (üstteki etiket) taşmasını engeller */
+@media (max-width: 768px) {
+  .badge.bg-gradient-primary-to-secondary {
+    display: inline-block !important;
+    white-space: normal !important; /* Satır atlamasına izin ver */
+    text-align: center !important;
+    font-size: 0.75rem !important; /* Yazıyı küçült */
+    padding: 0.4rem 0.7rem !important;
+    line-height: 1.4;
+    border-radius: 0.6rem;
+  }
 }
+
+/* Badge görünümünü biraz yumuşat ve modernleştir */
+.badge.bg-gradient-primary-to-secondary {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  font-weight: 600;
+}
+
+
 }
