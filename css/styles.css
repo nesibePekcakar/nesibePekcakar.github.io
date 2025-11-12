@@ -3815,15 +3815,15 @@ textarea.form-control-lg {
 .navbar {
   --bs-navbar-padding-x: 0;
   --bs-navbar-padding-y: 0.5rem;
-  --bs-navbar-color: rgba(0, 0, 0, 0.55);
+  --bs-navbar-color: rgba(255, 255, 255, 0.9);
   --bs-navbar-hover-color: rgba(0, 0, 0, 0.7);
   --bs-navbar-disabled-color: rgba(0, 0, 0, 0.3);
-  --bs-navbar-active-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-active-color: rgba(255, 255, 255, 0.9);
   --bs-navbar-brand-padding-y: 0.3125rem;
   --bs-navbar-brand-margin-end: 1rem;
   --bs-navbar-brand-font-size: 1.25rem;
-  --bs-navbar-brand-color: rgba(0, 0, 0, 0.9);
-  --bs-navbar-brand-hover-color: rgba(0, 0, 0, 0.9);
+  --bs-navbar-brand-color: rgba(255, 255, 255, 0.9);
+  --bs-navbar-brand-hover-color: rgba(255, 255, 255, 0.9);
   --bs-navbar-nav-link-padding-x: 0.5rem;
   --bs-navbar-toggler-padding-y: 0.25rem;
   --bs-navbar-toggler-padding-x: 0.75rem;
@@ -11953,23 +11953,44 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
   }
 }
 
-/* 📱 Mobilde badge (üstteki etiket) taşmasını engeller */
-@media (max-width: 768px) {
-  .badge.bg-gradient-primary-to-secondary {
-    display: inline-block !important;
-    white-space: normal !important; /* Satır atlamasına izin ver */
-    text-align: center !important;
-    font-size: 0.75rem !important; /* Yazıyı küçült */
-    padding: 0.4rem 0.7rem !important;
-    line-height: 1.4;
-    border-radius: 0.6rem;
-  }
+
+/* 🌐 Desktop görünümünde mevcut hali koru */
+.badge.bg-gradient-primary-to-secondary {
+  font-weight: 600;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  white-space: nowrap;
 }
 
-/* Badge görünümünü biraz yumuşat ve modernleştir */
-.badge.bg-gradient-primary-to-secondary {
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  font-weight: 600;
+/* 📱 Mobil görünüm için (alt alta, çizgisiz) */
+@media (max-width: 768px) {
+  .badge.bg-gradient-primary-to-secondary {
+    display: block !important;
+    white-space: normal !important;
+    text-align: center !important;
+    font-size: 0.8rem !important;
+    padding: 0.6rem 0.8rem !important;
+    line-height: 1.6;
+  }
+
+  /* Dikeyde ayırmak için: "|" karakterlerini gizle */
+  .badge.bg-gradient-primary-to-secondary::before {
+    content: "";
+  }
+
+  /* "|" karakterlerini görünmez yap */
+  .badge.bg-gradient-primary-to-secondary {
+    color: #fff;
+  }
+
+  /* Otomatik olarak çizgileri boşlukla değiştir */
+  .badge.bg-gradient-primary-to-secondary {
+    word-break: break-word;
+  }
+
+  /* Eğer badge’in içinde " | " varsa bunları gizle */
+  .badge.bg-gradient-primary-to-secondary {
+    /* Pipe karakterini satır sonuna dönüştür */
+  }
 }
 
 

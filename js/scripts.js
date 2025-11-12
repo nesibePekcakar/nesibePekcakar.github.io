@@ -21,3 +21,13 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const badge = document.querySelector('.badge.bg-gradient-primary-to-secondary');
+  if (badge && window.innerWidth <= 768) {
+    badge.innerHTML = badge.textContent
+      .split('|')
+      .map(item => item.trim())
+      .join('<br>');
+  }
+});
