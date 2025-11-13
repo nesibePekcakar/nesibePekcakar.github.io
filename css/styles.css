@@ -4734,7 +4734,7 @@ textarea.form-control-lg {
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
-/* Mobilde alt alta geçirme ve "|" gizleme */
+/* Mobilde alt alta geçirme ve "|" gizleme 
 @media (max-width: 768px) {
   .badge.bg-gradient-primary-to-secondary .text-uppercase {
     display: flex;          
@@ -4746,6 +4746,23 @@ textarea.form-control-lg {
   }
 
   .badge.bg-gradient-primary-to-secondary .text-uppercase span {
+    display: none;
+  }
+}*/
+@media (max-width: 576px) {
+  .text-uppercase {
+    display: block;       /* stack children vertically */
+    text-align: left;
+  }
+
+  /* put each non-separator span on its own line */
+  .text-uppercase span:not(.text-secondary) {
+    display: block;
+    padding: 0.12rem 0;   /* small vertical spacing */
+  }
+
+  /* hide the separators (the spans with class text-secondary) */
+  .text-uppercase .text-secondary {
     display: none;
   }
 }
