@@ -4235,7 +4235,7 @@ textarea.form-control-lg {
   --bs-navbar-brand-color: #fff;
   --bs-navbar-brand-hover-color: #fff;
   --bs-navbar-toggler-border-color: rgba(255, 255, 255, 0.1);
-  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23fff' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
 .card {
@@ -4752,13 +4752,13 @@ textarea.form-control-lg {
 @media (max-width: 576px) {
   .text-uppercase {
     display: block;       /* stack children vertically */
-    text-align: left;
+    text-align: center;
   }
 
   /* put each non-separator span on its own line */
   .text-uppercase span:not(.text-secondary) {
     display: block;
-    padding: 0.12rem 0;   /* small vertical spacing */
+    padding: 0.25rem 0;   /* small vertical spacing */
   }
 
   /* hide the separators (the spans with class text-secondary) */
