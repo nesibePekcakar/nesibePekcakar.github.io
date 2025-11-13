@@ -12035,24 +12035,55 @@ background: linear-gradient(315deg, #439A97 0%, #7965C1 100%);
 /* ===== Footer Icon Hover Effects (Merged & Corrected) ===== */
 /* NOTE: The second block's values (1.6rem, scale 1.15, and the multi-shadow) were kept as they were usually defined last. */
 
-/* Base Style */
+/* Base Style 
 footer .text-gradient i {
-  /* Only define once */
   font-size: 1.6rem; 
   transition: all 0.3s ease;
 }
 
-/* Hover Effect */
 footer .text-gradient:hover i {
-  /* Only define once */
   transform: scale(1.15) rotate(5deg);
-  color: #62B6B7; /* main gradient tone */
+  color: #62B6B7; /* main gradient tone 
   text-shadow: 0 0 10px rgba(98, 182, 183, 0.6),
                0 0 20px rgba(67, 154, 151, 0.4);
 }
 
-/* Optional subtle color transition for link hover (Keep this separate) */
 footer .text-gradient {
   transition: color 0.3s ease;
+}*/
+/* ===== Geliştirilmiş Footer İkon Efektleri ===== */
+
+/* Base Style (Değişiklik yok) */
+footer .text-gradient i {
+  font-size: 1.6rem; 
+  /* Geçişi daha dinamik hale getirelim */
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+/* Hover Effect (Geliştirilmiş Transform ve Gölge) */
+footer .text-gradient:hover i {
+  /* scale ve rotate'e ek olarak z ekseninde hafif bir kalkış ekledik */
+  /* transform'dan önce perspective eklemek 3D etkisi için önemlidir */
+  transform: perspective(500px) scale(1.2) rotate(3deg) translateZ(10px); 
+  
+  /* Işık Rengi: Aynı kaldı */
+  color: #62B6B7; 
+  
+  /* Gölgeyi daha yumuşak ve belirgin yaptık */
+  text-shadow: 0 5px 15px rgba(67, 154, 151, 0.5), /* Hafif kalkış hissi verir */
+               0 0 5px rgba(98, 182, 183, 0.9);   /* İkonun kendinden parlaması */
+}
+/* Eğer ikonlar bir yuvarlak içinde ise */
+footer .text-gradient {
+  /* İkonun etrafına yuvarlak bir alan tanımlayalım (HTML'de ikonun bir container içinde olduğunu varsayarak) */
+  display: inline-block;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.4s ease;
+}
+
+/* Hover'da arka plan ekleme */
+footer .text-gradient:hover {
+  background-color: rgba(98, 182, 183, 0.1); /* Hafif, şeffaf bir arka plan */
 }
 }
