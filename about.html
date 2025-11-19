@@ -20,6 +20,32 @@
 
     <!-- Theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- STYLE ADJUSTMENTS -->
+    <style>
+        .about-text {
+            font-size: 0.95rem;
+            line-height: 1.55;
+        }
+        .about-title {
+            font-size: 1.4rem;
+        }
+        .about-subtitle {
+            font-size: 1.1rem;
+        }
+        .list-small li {
+            font-size: 0.95rem;
+        }
+        .card {
+            border-radius: 1rem;
+        }
+        .card p,
+        .card ul {
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body class="d-flex flex-column h-100">
@@ -46,103 +72,108 @@
     </nav>
 
     <!-- Header -->
-<header class="pt-4 pb-2">
-    <div class="text-center mb-2">
-        <h1 class="display-5 fw-bold mb-0">
-            <span class="text-gradient d-inline">About Nesibe</span>
-        </h1>
-    </div>
-</header>
-
-
-   <!-- About Section -->
-<section class="pt-4 pb-5">
-    <div class="bg-light px-4 px-md-5">
-
-        <div class="row justify-content-center">
-            <div class="col-xl-9 col-lg-10">
-
-                <!-- MAIN ABOUT CARD -->
-                <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center">
-
-                    <!-- Shortened Intro -->
-                    <p class="fs-5 text-start mx-auto" style="max-width: 800px;">
-                        I’ve always been drawn to <strong>software and artificial intelligence</strong>. Through the science-fiction books and movies/tv-series I have consumed
-                        these fields sparked my curiosity long before I studied engineering. I dreamt of taking part of the future technologies.
-                    </p>
-
-                    <p class="fs-5 text-start mx-auto" style="max-width: 800px;">
-                        During my studies as a computer engineering student, I earned a <strong>full scholarship</strong> for my education, <strong>Erasmus funding</strong>, 
-                        and a <strong>merit award</strong> which is given 3 students in the department every year.
-                        These represent the discipline and passion I bring to my work and also my dedication to my field of study.
-                    </p>
-
-                    <p class="fs-5 text-start mx-auto" style="max-width: 800px;">
-                        I focus on building systems that are <strong>practical, user-centered, and technically solid</strong>. 
-                        Quality, clarity, and thoughtful execution guide every project I develop.
-                    </p>
-
-                    <!-- Strong Personal Sentence -->
-                    <p class="fw-bold lead text-primary fs-4 mt-4">
-                        I love engineering, solving problems, learning, and creating technology that genuinely works.
-                    </p>
-                </div>
-
-                <!-- HOBBIES SECTION -->
-                <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
-                    <h3 class="fw-bold text-gradient mb-3">Hobbies</h3>
-                    <p class="fs-5 mb-3">
-                        Outside of engineering, I enjoy activities that expand my creativity and keep me grounded.
-                    </p>
-
-                    <ul class="list-unstyled fs-5">
-                        <li class="mb-2"><i class="bi bi-star-fill text-primary me-2"></i>Reading books especially science-fiction </li>
-                        <li class="mb-2"><i class="bi bi-star-fill text-primary me-2"></i>Exploring new AI tools & building small experiments</li>
-<li class="mb-2"><i class="bi bi-star-fill text-primary me-2"></i>Expanding my knowledge in sociology and philosophy</li>
-                        <li class="mb-2"><i class="bi bi-star-fill text-primary me-2"></i>Watching and analyzing films</li>
-                    </ul>
-                </div>
-
-                <!-- FAVORITES SECTION -->
-                <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
-                    <h3 class="fw-bold text-gradient mb-3">Favorites</h3>
-
-                    <div class="row text-start mx-auto" style="max-width: 800px;">
-
-                        <!-- Movies -->
-                        <div class="col-md-6 mb-4">
-                            <h5 class="fw-bold text-primary mb-2">Movies</h5>
-                            <ul class="list-unstyled fs-5 mb-0">
-                                <li class="mb-1">• Westworld</li>
-                                <li class="mb-1">• Blade Runner</li>
-                                <li class="mb-1">• Terminator</li>
-                                <li class="mb-1">• Lord Of The Rings</li>
-                            </ul>
-                        </div>
-
-                        <!-- Books -->
-                        <div class="col-md-6 mb-4">
-                            <h5 class="fw-bold text-primary mb-2">Books</h5>
-                            <ul class="list-unstyled fs-5 mb-0">
-                                <li class="mb-1">• Dune</li>
-                                <li class="mb-1">• Frankenstein</li>
-                                <li class="mb-1">• Notes from Underground</li>
-                                <li class="mb-1">• Do Androids Dream of Electric Sheep?</li>
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+    <header class="bg-light pb-2">
+        <div class="text-center mb-2">
+            <h1 class="display-5 fw-bold mb-0">
+                <span class="text-gradient d-inline">About Nesibe</span>
+            </h1>
         </div>
-    </div>
-</section>
+    </header>
+
+    <!-- About Section -->
+    <section class="pt-4 pb-5">
+        <div class="bg-light px-4 px-md-5">
+
+            <div class="row justify-content-center">
+                <div class="col-xl-9 col-lg-10">
+
+                    <!-- MAIN ABOUT CARD -->
+                    <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center">
+
+                        <p class="about-text text-start">
+                            I’ve always been drawn to <strong>software and artificial intelligence</strong>. Through the science-fiction books and films I grew up with, these fields sparked my curiosity long before I studied engineering.
+                        </p>
+
+                        <p class="about-text text-start">
+                            During my studies, I earned a <strong>full scholarship</strong>, <strong>Erasmus funding</strong>, and a <strong>merit award</strong> given to only three students in the department each year—reflecting my discipline and dedication to learning.
+                        </p>
+
+                        <p class="about-text text-start">
+                            I focus on building systems that are <strong>practical, user-centered, and technically solid</strong>. Quality, clarity, and thoughtful execution guide every project I build.
+                        </p>
+
+                        <p class="fw-semibold text-primary about-subtitle mt-3">
+                            I love engineering, solving problems, learning, and creating technology that genuinely works.
+                        </p>
+                    </div>
+
+                    <!-- HOBBIES -->
+                    <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
+                        <h3 class="fw-bold text-gradient about-title mb-3">
+                            <i class="bi bi-lightbulb me-2"></i>Hobbies
+                        </h3>
+
+                        <p class="about-text mb-3">
+                            Outside of engineering, I enjoy activities that expand my creativity and keep me grounded.
+                        </p>
+
+                        <ul class="list-unstyled list-small text-start">
+                            <li class="mb-2">• Reading, especially science-fiction</li>
+                            <li class="mb-2">• Exploring new AI tools and building small experiments</li>
+                            <li class="mb-2">• Expanding my knowledge in sociology and philosophy</li>
+                            <li class="mb-2">• Watching and analyzing films</li>
+                        </ul>
+                    </div>
+
+                    <!-- FAVORITES -->
+                    <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
+                        <h3 class="fw-bold text-gradient about-title mb-3">
+                            <i class="bi bi-star-fill me-2"></i>Favorites
+                        </h3>
+
+                        <div class="row text-start">
+
+                            <!-- MOVIES -->
+                            <div class="col-md-6 mb-4">
+                                <h5 class="fw-bold text-gradient about-subtitle mb-2">
+                                    <i class="bi bi-film me-2"></i>Movies
+                                </h5>
+
+                                <ul class="list-unstyled list-small mb-0">
+                                    <li class="mb-1">• Westworld</li>
+                                    <li class="mb-1">• Blade Runner</li>
+                                    <li class="mb-1">• Terminator</li>
+                                    <li class="mb-1">• The Lord of the Rings</li>
+                                </ul>
+                            </div>
+
+                            <!-- BOOKS -->
+                            <div class="col-md-6 mb-4">
+                                <h5 class="fw-bold text-gradient about-subtitle mb-2">
+                                    <i class="bi bi-book-half me-2"></i>Books
+                                </h5>
+
+                                <ul class="list-unstyled list-small mb-0">
+                                    <li class="mb-1">• Dune</li>
+                                    <li class="mb-1">• Frankenstein</li>
+                                    <li class="mb-1">• Notes from Underground</li>
+                                    <li class="mb-1">• Do Androids Dream of Electric Sheep?</li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
 
 </main>
 
 <!-- Footer -->
-<footer class="bg-white py-4 mt-auto">
+<footer class="bg-light py-4 mt-auto">
     <div class="container px-5">
         <div class="d-flex justify-content-center fs-2 gap-4">
             <a href="mailto:nesibe.pekcakar@gmail.com" class="text-gradient"><i class="bi bi-envelope"></i></a>
