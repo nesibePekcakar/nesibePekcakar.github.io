@@ -20,119 +20,106 @@
 
     <!-- Theme CSS -->
     <link href="css/styles.css" rel="stylesheet" />
-
-    <!-- STYLE ADJUSTMENTS -->
-    <style>
-        .about-text {
-            font-size: 0.95rem;
-            line-height: 1.55;
-        }
-        .about-title {
-            font-size: 1.4rem;
-        }
-        .about-subtitle {
-            font-size: 1.1rem;
-        }
-        .list-small li {
-            font-size: 0.95rem;
-        }
-        .card {
-            border-radius: 1rem;
-        }
-        .card p,
-        .card ul {
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-    </style>
 </head>
 
 <body class="d-flex flex-column h-100">
 <main class="flex-shrink-0">
 
    <!-- Navigation-->
-            <nav class="navbar navbar-expand-lg navbar-light py-2 navbar-gradient">
-                <div class="container px-5">
-                    <a class="navbar-brand" href="index.html"><span class="fw-bolder text-primary">Nesibe Nur Pekçakar</span></a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                            <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+   <nav class="navbar navbar-expand-lg navbar-light py-2 navbar-gradient">
+        <div class="container px-5">
+            <a class="navbar-brand" href="index.html">
+                <span class="fw-bolder text-primary">Nesibe Nur Pekçakar</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-    <!-- Header -->
-    <div class="text-center mb-5">
-                    <h1 class="display-5 fw-bolder mb-0"><span class="text-gradient d-inline">About Nesibe</span></h1>
-                </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+                    <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
 
     <!-- About Section -->
     <section class="bg-light pt-4 pb-5">
-        <div class="bg-light px-4 px-md-5">
+        <div class="container px-4 px-md-5">
 
-            <div class="bg-light row justify-content-center">
+            <!-- TITLE -->
+            <div class="text-center mb-5">
+                <h1 class="display-5 fw-bolder mb-0">
+                    <span class="text-gradient d-inline">About Nesibe</span>
+                </h1>
+            </div>
+
+            <div class="row justify-content-center">
                 <div class="col-xl-9 col-lg-10">
 
                     <!-- MAIN ABOUT CARD -->
                     <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center">
+                        <div class="mx-auto" style="max-width:800px">
+                            <p class="fs-6 lh-base text-start">
+                                I’ve always been drawn to <strong>software and artificial intelligence</strong>. 
+                                Through the science-fiction books and films I grew up with, these fields sparked my curiosity long before I studied engineering.
+                            </p>
 
-                        <p class="about-text text-start">
-                            I’ve always been drawn to <strong>software and artificial intelligence</strong>. Through the science-fiction books and films I grew up with, these fields sparked my curiosity long before I studied engineering.
-                        </p>
+                            <p class="fs-6 lh-base text-start">
+                                During my studies, I earned a <strong>full scholarship</strong>, 
+                                <strong>Erasmus funding</strong>, and a <strong>merit award</strong>—
+                                given to only three students in the department each year.
+                            </p>
 
-                        <p class="about-text text-start">
-                            During my studies, I earned a <strong>full scholarship</strong>, <strong>Erasmus funding</strong>, and a <strong>merit award</strong> given to only three students in the department each year—reflecting my discipline and dedication to learning.
-                        </p>
+                            <p class="fs-6 lh-base text-start">
+                                I focus on building systems that are <strong>practical, user-centered, and technically solid</strong>. 
+                                Quality, clarity, and thoughtful execution guide every project I build.
+                            </p>
 
-                        <p class="about-text text-start">
-                            I focus on building systems that are <strong>practical, user-centered, and technically solid</strong>. Quality, clarity, and thoughtful execution guide every project I build.
-                        </p>
-
-                        <p class="fw-semibold text-primary about-subtitle mt-3">
-                            I love engineering, solving problems, learning, and creating technology that genuinely works.
-                        </p>
+                            <p class="fw-semibold text-primary fs-5 mt-3">
+                                I love engineering, solving problems, learning, and creating technology that genuinely works.
+                            </p>
+                        </div>
                     </div>
 
                     <!-- HOBBIES -->
                     <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
-                        <h3 class="fw-bold text-gradient d-inline about-title mb-3">
+                        <h3 class="fw-bold text-gradient d-inline fs-4 mb-3">
                             <i class="bi bi-lightning-charge me-2"></i>Hobbies
                         </h3>
 
-                        <p class="about-text mb-3">
+                        <p class="fs-6 lh-base mb-3">
                             Outside of engineering, I enjoy activities that expand my creativity and keep me grounded.
                         </p>
 
-                        <ul class="list-unstyled list-small text-start">
-                            <li class="mb-2">• Reading, especially science-fiction</li>
-                            <li class="mb-2">• Exploring new AI tools and building small experiments</li>
-                            <li class="mb-2">• Expanding my knowledge in sociology and philosophy</li>
-                            <li class="mb-2">• Watching and analyzing films</li>
+                        <ul class="list-unstyled text-start mx-auto" style="max-width:800px">
+                            <li class="mb-2 fs-6">• Reading, especially science-fiction</li>
+                            <li class="mb-2 fs-6">• Exploring new AI tools and building small experiments</li>
+                            <li class="mb-2 fs-6">• Sociology and philosophy studies</li>
+                            <li class="mb-2 fs-6">• Watching and analyzing films</li>
                         </ul>
                     </div>
 
                     <!-- FAVORITES -->
                     <div class="card shadow-sm border-0 rounded-4 p-4 p-md-5 text-center mt-4">
-                        <h3 class="fw-bold text-gradient d-inline about-title mb-3">
+                        <h3 class="fw-bold text-gradient d-inline fs-4 mb-3">
                             <i class="bi bi-star-fill me-2"></i>Favorites
                         </h3>
 
-                        <div class="row text-start">
+                        <div class="row text-start mx-auto" style="max-width:800px">
 
                             <!-- MOVIES -->
                             <div class="col-md-6 mb-4">
-                                <h5 class="fw-bold text-gradient d-inline about-subtitle mb-2">
+                                <h5 class="fw-bold text-gradient d-inline fs-5 mb-2">
                                     <i class="bi bi-film me-2"></i>Movies
                                 </h5>
-
-                                <ul class="list-unstyled list-small mb-0">
+                                <ul class="list-unstyled fs-6 mb-0">
                                     <li class="mb-1">• Westworld</li>
                                     <li class="mb-1">• Blade Runner</li>
                                     <li class="mb-1">• Terminator</li>
@@ -142,11 +129,10 @@
 
                             <!-- BOOKS -->
                             <div class="col-md-6 mb-4">
-                                <h5 class="fw-bold text-gradient d-inline about-subtitle mb-2">
+                                <h5 class="fw-bold text-gradient d-inline fs-5 mb-2">
                                     <i class="bi bi-book-half me-2"></i>Books
                                 </h5>
-
-                                <ul class="list-unstyled list-small mb-0">
+                                <ul class="list-unstyled fs-6 mb-0">
                                     <li class="mb-1">• Dune</li>
                                     <li class="mb-1">• Frankenstein</li>
                                     <li class="mb-1">• Notes from Underground</li>
@@ -169,9 +155,15 @@
 <footer class="bg-light py-4 mt-auto">
     <div class="container px-5">
         <div class="d-flex justify-content-center fs-2 gap-4">
-            <a href="mailto:nesibe.pekcakar@gmail.com" class="text-gradient"><i class="bi bi-envelope"></i></a>
-            <a href="https://linkedin.com/in/nesibepekcakar" target="_blank" class="text-gradient"><i class="bi bi-linkedin"></i></a>
-            <a href="https://github.com/nesibepekcakar" target="_blank" class="text-gradient"><i class="bi bi-github"></i></a>
+            <a href="mailto:nesibe.pekcakar@gmail.com" class="text-gradient">
+                <i class="bi bi-envelope"></i>
+            </a>
+            <a href="https://linkedin.com/in/nesibepekcakar" target="_blank" class="text-gradient">
+                <i class="bi bi-linkedin"></i>
+            </a>
+            <a href="https://github.com/nesibepekcakar" target="_blank" class="text-gradient">
+                <i class="bi bi-github"></i>
+            </a>
         </div>
     </div>
 </footer>
